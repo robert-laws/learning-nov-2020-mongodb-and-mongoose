@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 app.post('/items', mongoItems.createItem);
 
-app.get('/items');
+app.get('/items', mongoItems.getItems);
 
 const connectDb = async () => {
   try {

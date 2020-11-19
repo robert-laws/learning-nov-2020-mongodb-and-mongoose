@@ -13,4 +13,11 @@ const createItem = async (req, res, next) => {
   res.json(result);
 };
 
+const getItems = async (req, res, next) => {
+  const items = await Item.find().exec();
+
+  res.json(items);
+};
+
 exports.createItem = createItem;
+exports.getItems = getItems;

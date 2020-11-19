@@ -9,6 +9,7 @@ const createItem = async (req, res, next) => {
   });
 
   const result = await createdItem.save();
+  console.log(typeof createdItem.id);
 
   res.json(result);
 };
